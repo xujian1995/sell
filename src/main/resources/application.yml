@@ -1,0 +1,41 @@
+server:
+  servlet:
+    context-path: /sell
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://113.54.153.14/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+    open-in-view: true
+
+  jackson:
+    default-property-inclusion: non_null  #不允许返回为空的对象给前台  全局配置
+  redis:
+    host: 113.54.153.14
+    port: 6379
+    password:
+
+wechat:
+  # 公众账号, 授权
+  mpAppId: wxf1fb225b3ad94300
+  mpAppSecret: 6400afc704145a516f2ced42f3f923d6
+
+  # 开放平台 扫码登陆
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+  # 支付/商户号
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  # 发起支付不需要证书, 退款需要
+  keyPath: F:\h5.p12
+  notifyUrl: http://eatxujian1995.natapp1.cc/sell/pay/notify
+
+projecturl:
+  wechatMpAuthorize: http://eatxujian1995.natapp1.cc
+  wechatOpenAuthorize : http://eatxujian1995.natapp1.cc
+  sell: http://eatxujian1995.natapp1.cc
+
